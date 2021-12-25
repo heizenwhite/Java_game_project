@@ -1,4 +1,4 @@
-package Sterben.Game;
+package Pillermen.Game;
 
 import javax.swing.JFrame;
 
