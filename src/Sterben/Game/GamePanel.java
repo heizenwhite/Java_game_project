@@ -15,6 +15,8 @@ public class GamePanel extends JPanel implements Runnable{
     private Graphics2D g2;
 
     public GamePanel(int w, int h){
+        this.width = w;
+        this.height = h;
         setPreferredSize(new Dimension(w,h));
         setFocusable(true);
         requestFocus();
