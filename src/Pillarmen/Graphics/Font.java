@@ -2,10 +2,11 @@ package Pillarmen.Graphics;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
-public class Font {
+public class Font extends ArrayList<BufferedImage> {
 
-    private BufferedImage FONTSHEET = null;
+    private final BufferedImage FONTSHEET;
     private BufferedImage[][] spriteArray;
     private final int TILE_SIZE = 32;
     public int w;
