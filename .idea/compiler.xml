@@ -2,7 +2,7 @@
 <project version="4">
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Game 2D" options="--add-modules java.base" />
+      <module name="Game 2D" options="--add-modules java.base,java.desktop" />
     </option>
   </component>
 </project>

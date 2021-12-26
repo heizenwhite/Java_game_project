@@ -1,4 +1,8 @@
-package Pillarmen;
+package Pillarmen.Game;
+
+import Pillarmen.States.GameStateManager;
+import Pillarmen.Utils.KeyHandler;
+import Pillarmen.Utils.MouseHandler;
 
 import javax.swing.JPanel;
 import java.awt.*;
@@ -15,6 +19,10 @@ public class GamePanel extends JPanel implements Runnable{
     private Thread th;
     private BufferedImage img;
     private Graphics2D g2;
+
+    private MouseHandler mouse;
+    private KeyHandler key;
+    private GameStateManager gsm;
 
     //Create GamePanel with Width and Height
     public GamePanel(int w, int h){
@@ -39,16 +47,20 @@ public class GamePanel extends JPanel implements Runnable{
         this.run = true;
         this.img = new BufferedImage(width,height,BufferedImage.TYPE_INT_ARGB);
         this.g2 = (Graphics2D) img.getGraphics();
+        mouse = new MouseHandler(this);
+        key = new KeyHandler(this);
+        gsm = new GameStateManager();
     }
 
     //Update generated elements
     public void update(){
 
+        gsm.update();
     }
 
     //Draw elements to generate
     public void draw(){
-        Graphics g = (Graphics) this.getGraphics();
+        Graphics g = this.getGraphics();
         g.drawImage(img, 0 , 0 ,width, height, null);
         g.dispose();
     }
@@ -58,11 +70,13 @@ public class GamePanel extends JPanel implements Runnable{
         if(g2 != null){
             g2.setColor(new Color(60,130,240));
             g2.fillRect(0, 0 , width, height);
+            gsm.render(g2);
         }
     }
 
-    public void input(){
+    public void input(MouseHandler mouse, KeyHandler key){
 
+        gsm.input(mouse, key);
     }
 
     //Game Loop to run
@@ -104,7 +118,7 @@ public class GamePanel extends JPanel implements Runnable{
             while((now - lastUpdateTime) > TBU && (updateCount < MUBR) ){
 
                 update();
-                input();
+                input(mouse, key);
                 lastUpdateTime += TBU;
                 updateCount++;
             }
@@ -113,7 +127,7 @@ public class GamePanel extends JPanel implements Runnable{
                 lastUpdateTime = now - TBU ;
             }
 
-            input();
+            input(mouse, key);
             render();
             draw();
 

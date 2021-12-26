@@ -5,11 +5,11 @@ import Pillarmen.Utils.MouseHandler;
 
 import java.awt.*;
 
-public abstract class GameStates {
+public abstract class GameState {
 
-    private GameStatesManager gsm;
+    private GameStateManager gsm;
 
-    public GameStates(GameStatesManager gsm){
+    public GameState(GameStateManager gsm){
         this.gsm = gsm;
     }
 
