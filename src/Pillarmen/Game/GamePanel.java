@@ -1,4 +1,4 @@
-package Pillermen.Game;
+package Pillarmen;
 
 import javax.swing.JPanel;
 import java.awt.*;

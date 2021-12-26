@@ -1,4 +1,4 @@
-package Pillermen.Game;
+package Pillarmen;
 
 public class GameLauncher {
 

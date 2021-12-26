@@ -1,4 +1,6 @@
-package Pillermen.Game;
+package Pillarmen;
+
+import Pillarmen.GamePanel;
 
 import javax.swing.JFrame;
 
