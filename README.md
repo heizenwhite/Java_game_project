@@ -5,7 +5,8 @@
 
 Use the Intellij Builder to run the game :)
 
-##Installation
+## Installation
+
 Install it like any sane person would [Intellij](https://www.jetbrains.com/idea/promo/?source=google&medium=cpc&campaign=9736964638&gclid=Cj0KCQiA5aWOBhDMARIsAIXLlkev-CrxxHMypc9TCzY4uGWpYd7AcoDyyU83T0_UsZnej8Kf4WHfX9QaAsVCEALw_wcB)
 
 ## Controls
