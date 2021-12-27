@@ -11,7 +11,7 @@ public class Window extends JFrame {
     private GamePanel gp;
 
     public Window() {
-        setTitle("Decay");
+        setTitle("Pillarmen Random Adventure");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setIgnoreRepaint(true);
         pack();
