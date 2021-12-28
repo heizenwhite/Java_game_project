@@ -36,14 +36,14 @@ public class PlayState extends GameState {
 
 		tm = new TileManager("tile/tilemap.xml", cam);
 
-		SpriteSheet tileset = new SpriteSheet("tile/overworldOP.png", 32, 32);
+		/*SpriteSheet tileset = new SpriteSheet("tile/overworldOP.png", 32, 32);
 		SpriteSheet treeset = new SpriteSheet("material/trees.png", 64, 96);
 
 		mm = new MaterialManager(64, 150);
 		mm.setMaterial(MaterialManager.TYPE.TREE, treeset.getSprite(1, 0), 64);
 		mm.setMaterial(MaterialManager.TYPE.TREE, treeset.getSprite(3, 0), 64);
 
-		tm = new TileManager(tileset, 150, cam, mm);
+		tm = new TileManager(tileset, 150, cam, mm);*/
 
 		gameObject = new GameObjectHeap();
 		//gameObject.addAll(mm.list);
